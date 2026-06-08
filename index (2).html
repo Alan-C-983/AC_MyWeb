@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Alan Caliński</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png">
+
+    <!-- Font Awesome - ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="bg-blur bg-blur-1"></div>
+        <div class="bg-blur bg-blur-2"></div>
+
+        <div class="container">
+            <nav>
+                <a href="#header" class="brand">
+                    <!-- Wrzuc logo do folderu images i nazwij je: logo.png -->
+                    <img src="images/logo.png" class="logo" alt="Logo Alan Caliński">
+                    <span class="brand-text">Alan Caliński</span>
+                </a>
+
+                <ul id="sidemenu">
+                    <li><a href="#about">O mnie</a></li>
+                    <li><a href="#services">Umiejętności</a></li>
+                    <li><a href="#portfolio">Projekty</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <i class="fa-solid fa-xmark menu-icon close-icon" onclick="closemenu()"></i>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="toggle-btn" id="btn" type="button">
+                        <span id="btnText">Light</span>
+                        <img src="images/sun.png" id="btnIcon" alt="">
+                    </button>
+
+                    <i class="fa-solid fa-bars menu-icon open-icon" onclick="openmenu()"></i>
+                </div>
+            </nav>
+
+            <section class="hero">
+                <div class="hero-content slide-left">
+                    <p class="eyebrow">Portfolio osobiste</p>
+                    <h1>Cześć, jestem <span>Alan</span>.</h1>
+                    <p class="hero-desc">
+                        Interesuję się analizą biznesową, finansami, projektami IT oraz tworzeniem przejrzystych rozwiązań.
+                        Na tej stronie znajdziesz moje umiejętności, doświadczenie i przykładowe projekty.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">Zobacz projekty</a>
+                        <a href="#contact" class="btn btn-ghost">Kontakt</a>
+                    </div>
+                </div>
+
+                <div class="hero-card slide-right">
+                    <div class="profile-ring">
+                        <div class="profile-avatar">
+                            <img src="images/logo.png" alt="Logo / zdjęcie profilowe">
+                        </div>
+                    </div>
+
+                    <h2>Alan Caliński</h2>
+                    <p>Portfolio • Projekty • Umiejętności</p>
+
+                    <div class="hero-stats">
+                        <div>
+                            <strong>3+</strong>
+                            <span>obszary rozwoju</span>
+                        </div>
+                        <div>
+                            <strong>IT</strong>
+                            <span>projekty i analiza</span>
+                        </div>
+                        <div>
+                            <strong>UEW</strong>
+                            <span>edukacja</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="section-heading">
+                <p>Kim jestem?</p>
+                <h1 class="sub-title">O mnie</h1>
+            </div>
+
+            <div class="row about-wrapper">
+                <div class="about-col-1">
+                    <div class="about-photo">
+                        <img src="images/logo.png" alt="Logo / zdjęcie">
+                    </div>
+                </div>
+
+                <div class="about-col-2">
+                    <p class="about-text">
+                        Jestem osobą, która lubi łączyć wiedzę biznesową z praktycznymi narzędziami technologicznymi.
+                        Interesują mnie finanse, rachunkowość, analiza procesów, programowanie oraz projektowanie
+                        czytelnych rozwiązań, które pomagają uporządkować pracę.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Umiejętności</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Doświadczenie</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Edukacja</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Analiza biznesowa i procesy</span><br>
+                                Tworzenie diagramów, opisywanie procesów, porządkowanie wymagań i prezentowanie rozwiązań w przejrzysty sposób.
+                            </li>
+                            <li>
+                                <span>Excel, SQL i podstawy programowania</span><br>
+                                Praca z danymi, podstawowe analizy, proste algorytmy, kwerendy oraz automatyzacja wybranych zadań.
+                            </li>
+                            <li>
+                                <span>Finanse i rachunkowość</span><br>
+                                Podstawy finansów, rachunkowości oraz analizy ekonomicznej zdobywane w trakcie studiów.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Projekty akademickie</span><br>Analiza procesów, diagramy BPMN/UML, praca z danymi i przygotowywanie dokumentacji.</li>
+                            <li><span>Praca zespołowa</span><br>Realizacja zadań projektowych, podział obowiązków i prezentowanie wyników.</li>
+                            <li><span>Rozwój praktyczny</span><br>Doskonalenie umiejętności technicznych, biznesowych i organizacyjnych.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Uniwersytet Ekonomiczny we Wrocławiu</span><br>Kierunek związany z zarządzaniem, biznesem i analizą.</li>
+                            <li><span>Kursy i projekty</span><br>Excel, SQL, podstawy programowania, analiza danych, diagramy i dokumentacja projektowa.</li>
+                            <li><span>Samodzielny rozwój</span><br>Finanse, inwestowanie, technologie i praktyczne zastosowania narzędzi IT.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <div class="section-heading">
+                <p>Co potrafię?</p>
+                <h1 class="sub-title">Umiejętności</h1>
+            </div>
+
+            <div class="services-list">
+                <div class="service-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>Analiza biznesowa</h2>
+                    <p>
+                        Potrafię opisywać procesy, tworzyć diagramy, porządkować informacje i przedstawiać je w logiczny sposób.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-table"></i>
+                    <h2>Excel i dane</h2>
+                    <p>
+                        Pracuję z arkuszami, podstawowymi analizami, formułami, wykresami oraz prostą klasyfikacją danych.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Podstawy IT</h2>
+                    <p>
+                        Znam podstawy Pythona, SQL, C++ oraz narzędzi wspierających analizę i organizację projektów.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-heading">
+                <p>Moje prace</p>
+                <h1 class="sub-title">Projekty</h1>
+            </div>
+
+            <div class="work-list">
+                <div class="work project-1">
+                    <div class="project-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <div class="layer">
+                        <h3>Diagramy BPMN / UML</h3>
+                        <p>Projekty związane z analizą procesów, przypadkami użycia i dokumentacją systemów.</p>
+                        <a href="#" target="_blank" aria-label="Otwórz projekt"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work project-2">
+                    <div class="project-icon"><i class="fa-solid fa-file-excel"></i></div>
+                    <div class="layer">
+                        <h3>Analiza w Excelu</h3>
+                        <p>Arkusze, formuły, wykresy, klasyfikacja, predykcja i podstawowa analiza danych.</p>
+                        <a href="#" target="_blank" aria-label="Otwórz projekt"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work project-3">
+                    <div class="project-icon"><i class="fa-brands fa-python"></i></div>
+                    <div class="layer">
+                        <h3>Python / SQL</h3>
+                        <p>Proste skrypty, zapytania SQL i zadania związane z przetwarzaniem danych.</p>
+                        <a href="#" target="_blank" aria-label="Otwórz projekt"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="row contact-wrapper">
+                <div class="contact-left">
+                    <div class="section-heading align-left">
+                        <p>Napisz do mnie</p>
+                        <h1 class="sub-title">Kontakt</h1>
+                    </div>
+
+                    <p><i class="fa-solid fa-envelope"></i><a href="mailto:alancalinski@gmail.com">alancalinski@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i>+48 000 000 000</p>
+                    <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+
+                    <a href="images/CV.pdf" download class="btn btn-primary cv-btn">Pobierz CV</a>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Twoje imię" required>
+                        <input type="email" name="Email" placeholder="Twój e-mail" required>
+                        <textarea name="Message" rows="6" placeholder="Twoja wiadomość"></textarea>
+                        <button type="submit" class="btn btn-primary">Wyślij</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2026 Alan Caliński. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- SCRIPT: zakładki ABOUT -->
+    <script>
+        const tablinks = document.getElementsByClassName("tab-links");
+        const tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(event, tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <!-- SCRIPT: menu mobilne -->
+    <script>
+        const sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-220px";
+        }
+    </script>
+
+    <!-- SCRIPT: formularz kontaktowy -->
+    <script>
+        const scriptURL = 'https://twoj-link-do-google-script.com';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            if (scriptURL.includes('twoj-link')) {
+                msg.innerHTML = "Formularz jest gotowy wizualnie. Podmień link Google Script, aby działała wysyłka.";
+                setTimeout(() => msg.innerHTML = "", 5000);
+                form.reset();
+                return;
+            }
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Wiadomość wysłana pomyślnie";
+                    setTimeout(() => msg.innerHTML = "", 5000);
+                    form.reset();
+                })
+                .catch(error => {
+                    msg.innerHTML = "Wystąpił błąd podczas wysyłania.";
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
+
+    <!-- SCRIPT: zmiana motywu -->
+    <script>
+        const btn = document.getElementById("btn");
+        const btnText = document.getElementById("btnText");
+        const btnIcon = document.getElementById("btnIcon");
+
+        btn.onclick = function () {
+            document.body.classList.toggle("light-theme");
+
+            if (document.body.classList.contains("light-theme")) {
+                btnIcon.src = "images/moon.png";
+                btnText.innerHTML = "Dark";
+            } else {
+                btnIcon.src = "images/sun.png";
+                btnText.innerHTML = "Light";
+            }
+        }
+    </script>
+</body>
+</html>
